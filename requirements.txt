@@ -1,0 +1,4 @@
+tensorflow==1.15.0
+keras==2.3.1
+csbdeep==0.5.2
+hdf5<3.0.0
