@@ -6,4 +6,4 @@ There are __strict__ dependencies on library versions, they are listed in requir
 
 Run "python prediction.py --help" to check how to use it.
 
-In case of any questions contact me on fruitpizza49@gmail.com
+In case of any questions contact me on nechaev.dv@phystech.edu
