@@ -8,7 +8,7 @@ from tqdm import tqdm
 base_path = os.path.abspath('')
 
 
-def split_and_predict(x, split=(8, 8, 1), overlap=1 / 3, cutoff=5, batch_size=24):
+def split_and_predict(x, model, split=(8, 8, 1), overlap=1 / 3, cutoff=5, batch_size=24):
     def gen_restore_data(x_train_windows):
         def gen():
             for i in range(x_train_windows.shape[0]):
@@ -122,7 +122,7 @@ def main():
 
     if len(img.shape) == 2:
         img = img[..., np.newaxis]
-    res = split_and_predict(img, (int(args.split), int(args.split), 1), batch_size=args.batch_size)
+    res = split_and_predict(img, model, (int(args.split), int(args.split), 1), batch_size=args.batch_size)
     res = res * 63
     res = np.around(res, 0)
     np.savez(base_path + '/result.npz', res)
