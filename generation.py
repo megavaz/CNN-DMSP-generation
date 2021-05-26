@@ -7,9 +7,6 @@ import os
 from tqdm import tqdm
 base_path = os.path.abspath('')
 
-model = tf.keras.models.load_model('/model/model_MAE_depth_4_per_level_3.h5')
-model.compile()
-
 
 def split_and_predict(x, split=(8, 8, 1), overlap=1 / 3, cutoff=5, batch_size=24):
     def gen_restore_data(x_train_windows):
@@ -105,7 +102,8 @@ def main():
     parser.add_argument('--header', type=str, default=None)
     parser.add_argument('--split', type=int, default=8, help='Number of tiles to split the imagery into.')
     parser.add_argument('--batch_size', type=int, default=16, help='Number of batches to be used in the prediction '
-                                                                   'process.') 
+                                                                   'process.')
+    parser.add_argument('--model', type=str, default='/model/model_MAE_depth_4_per_level_3.h5', help='Path to the model')
 
     args = parser.parse_args()
     if args.header is None:
@@ -119,7 +117,8 @@ def main():
     img = np.clip(img, 0, clip)
     img = img / img.max()
 
-
+    model = tf.keras.models.load_model()
+    model.compile()
 
     if len(img.shape) == 2:
         img = img[..., np.newaxis]
