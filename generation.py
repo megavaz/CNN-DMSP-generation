@@ -117,7 +117,7 @@ def main():
     img = np.clip(img, 0, clip)
     img = img / img.max()
 
-    model = tf.keras.models.load_model(args.model)
+    model = tf.keras.models.load_model(base_path + '/' + args.model)
     model.compile()
 
     if len(img.shape) == 2:
