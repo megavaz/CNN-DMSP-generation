@@ -1,5 +1,3 @@
-# Satellite-imagery-restoration-using-CARE
-
 This script currently supports .npz and .envi formats!
 
 Check the dependencies in the requirements.txt, you need to install tensorflow-addons.
