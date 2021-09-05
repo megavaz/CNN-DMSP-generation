@@ -27,7 +27,7 @@ This script currently supports .npz and .envi formats!
 
 Check the dependencies in the requirements.txt, you need to install tensorflow-addons.
 
-Run "python generate.py --help" to check how to use it.
+Run "python generation.py --help" to check how to use it.
 
 In case of any questions contact me on nechaev.dv@phystech.edu
 
