@@ -34,4 +34,6 @@ In case of any questions contact me on nechaev.dv@phystech.edu
 ### Citation
 If you use the data or model in your research, please cite:
 
+Nechaev, D.; Zhizhin, M.; Poyda, A.; Ghosh, T.; Hsu, F.-C.; Elvidge, C. Cross-Sensor Nighttime Lights Image Calibration for DMSP/OLS and SNPP/VIIRS with Residual U-Net. Remote Sens. **2021**, 13, 5026. https://doi.org/10.3390/rs13245026
+
 
