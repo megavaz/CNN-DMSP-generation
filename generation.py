@@ -143,8 +143,8 @@ def main():
     model = tf.keras.models.load_model(base_path + "/" + args.model)
     model.compile()
 
-    if len(img.shape) == 2:
-        img = img[..., np.newaxis]
+    img = np.squeeze(img)
+    img = img[..., np.newaxis]
     res = split_and_predict(
         img, model, (int(args.split), int(args.split), 1), batch_size=args.batch_size
     )
